@@ -56,15 +56,15 @@
 
 	var _reactDom = __webpack_require__(87);
 
-	var _app = __webpack_require__(233);
+	var _navBar = __webpack_require__(233);
 
-	var _app2 = _interopRequireDefault(_app);
+	var _navBar2 = _interopRequireDefault(_navBar);
 
 	function _interopRequireDefault(obj) {
 	  return obj && obj.__esModule ? obj : { default: obj };
 	}
 
-	(0, _reactDom.render)(_react2.default.createElement(_reactRouter.Route, { name: 'app', path: '/', handler: _app2.default }), document.getElementById('App'));
+	(0, _reactDom.render)(_react2.default.createElement('h1', null, 'SUP'), document.getElementById('App'));
 
 /***/ },
 /* 1 */
@@ -26430,23 +26430,23 @@
 	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 	}
 
-	var App = function (_Component) {
-	  _inherits(App, _Component);
+	var NavBar = function (_Component) {
+	  _inherits(NavBar, _Component);
 
-	  function App() {
-	    _classCallCheck(this, App);
+	  function NavBar() {
+	    _classCallCheck(this, NavBar);
 
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (NavBar.__proto__ || Object.getPrototypeOf(NavBar)).apply(this, arguments));
 	  }
 
-	  _createClass(App, [{
+	  _createClass(NavBar, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', { className: 'nav' }, _react2.default.createElement(_reactRouter.Link, { to: 'app' }, 'Home'), _react2.default.createElement('div', null, 'SUP'), _react2.default.createElement(_reactRouter.RouteHandler, null));
+	      return _react2.default.createElement('div', { className: 'nav' }, _react2.default.createElement(_reactRouter.Link, { to: 'app' }, 'Home'));
 	    }
 	  }]);
 
-	  return App;
+	  return NavBar;
 	}(_react.Component);
 
 	;
