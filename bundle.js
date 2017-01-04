@@ -56,15 +56,15 @@
 
 	var _reactDom = __webpack_require__(87);
 
-	var _navBar = __webpack_require__(233);
+	var _app = __webpack_require__(234);
 
-	var _navBar2 = _interopRequireDefault(_navBar);
+	var _app2 = _interopRequireDefault(_app);
 
 	function _interopRequireDefault(obj) {
 	  return obj && obj.__esModule ? obj : { default: obj };
 	}
 
-	(0, _reactDom.render)(_react2.default.createElement('h1', null, 'SUP'), document.getElementById('App'));
+	(0, _reactDom.render)(_react2.default.createElement('div', null, _react2.default.createElement(_app2.default, null)), document.getElementById('App'));
 
 /***/ },
 /* 1 */
@@ -26385,10 +26385,15 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 233 */
+/* 233 */,
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 
 	var _createClass = function () {
 	  function defineProperties(target, props) {
@@ -26407,6 +26412,10 @@
 	var _reactRouter = __webpack_require__(32);
 
 	var _reactRouter2 = _interopRequireDefault(_reactRouter);
+
+	var _picContainer = __webpack_require__(235);
+
+	var _picContainer2 = _interopRequireDefault(_picContainer);
 
 	function _interopRequireDefault(obj) {
 	  return obj && obj.__esModule ? obj : { default: obj };
@@ -26430,26 +26439,197 @@
 	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 	}
 
-	var NavBar = function (_Component) {
-	  _inherits(NavBar, _Component);
+	var App = function (_Component) {
+	  _inherits(App, _Component);
 
-	  function NavBar() {
-	    _classCallCheck(this, NavBar);
+	  function App() {
+	    _classCallCheck(this, App);
 
-	    return _possibleConstructorReturn(this, (NavBar.__proto__ || Object.getPrototypeOf(NavBar)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
 	  }
 
-	  _createClass(NavBar, [{
+	  _createClass(App, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', { className: 'nav' }, _react2.default.createElement(_reactRouter.Link, { to: 'app' }, 'Home'));
+	      return _react2.default.createElement('div', { className: 'main' }, _react2.default.createElement('h1', null, 'App'), _react2.default.createElement(_picContainer2.default, null));
 	    }
 	  }]);
 
-	  return NavBar;
+	  return App;
 	}(_react.Component);
 
+	exports.default = App;
 	;
+
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () {
+	  function defineProperties(target, props) {
+	    for (var i = 0; i < props.length; i++) {
+	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+	    }
+	  }return function (Constructor, protoProps, staticProps) {
+	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+	  };
+	}();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(32);
+
+	var _pic = __webpack_require__(236);
+
+	var _pic2 = _interopRequireDefault(_pic);
+
+	function _interopRequireDefault(obj) {
+	  return obj && obj.__esModule ? obj : { default: obj };
+	}
+
+	function _classCallCheck(instance, Constructor) {
+	  if (!(instance instanceof Constructor)) {
+	    throw new TypeError("Cannot call a class as a function");
+	  }
+	}
+
+	function _possibleConstructorReturn(self, call) {
+	  if (!self) {
+	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+	  }return call && (typeof call === "object" || typeof call === "function") ? call : self;
+	}
+
+	function _inherits(subClass, superClass) {
+	  if (typeof superClass !== "function" && superClass !== null) {
+	    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+	}
+
+	// import randomPuppy from 'random-puppy';
+	// const randomPuppy = require('random-puppy');
+
+	var PicContainer = function (_Component) {
+	  _inherits(PicContainer, _Component);
+
+	  function PicContainer(props) {
+	    _classCallCheck(this, PicContainer);
+
+	    var _this = _possibleConstructorReturn(this, (PicContainer.__proto__ || Object.getPrototypeOf(PicContainer)).call(this, props));
+
+	    _this.props = props;
+	    _this.state = {
+	      picStatus: false,
+	      picUrl: null
+	    };
+	    return _this;
+	  }
+
+	  _createClass(PicContainer, [{
+	    key: 'getPic',
+	    value: function getPic() {
+	      var _this2 = this;
+
+	      randomPuppy().then(function (url) {
+	        _this2.state.picStatus = true;
+	        _this2.state.picUrl = url;
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement('div', { className: 'main' }, _react2.default.createElement('h1', null, 'Container'), _react2.default.createElement('p', null, this.state.picUrl));
+	    }
+	  }]);
+
+	  return PicContainer;
+	}(_react.Component);
+
+	exports.default = PicContainer;
+	;
+
+/***/ },
+/* 236 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () {
+	  function defineProperties(target, props) {
+	    for (var i = 0; i < props.length; i++) {
+	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+	    }
+	  }return function (Constructor, protoProps, staticProps) {
+	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+	  };
+	}();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(32);
+
+	function _interopRequireDefault(obj) {
+	  return obj && obj.__esModule ? obj : { default: obj };
+	}
+
+	function _classCallCheck(instance, Constructor) {
+	  if (!(instance instanceof Constructor)) {
+	    throw new TypeError("Cannot call a class as a function");
+	  }
+	}
+
+	function _possibleConstructorReturn(self, call) {
+	  if (!self) {
+	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+	  }return call && (typeof call === "object" || typeof call === "function") ? call : self;
+	}
+
+	function _inherits(subClass, superClass) {
+	  if (typeof superClass !== "function" && superClass !== null) {
+	    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+	}
+
+	var Pic = function (_Component) {
+	  _inherits(Pic, _Component);
+
+	  function Pic(props) {
+	    _classCallCheck(this, Pic);
+
+	    var _this = _possibleConstructorReturn(this, (Pic.__proto__ || Object.getPrototypeOf(Pic)).call(this, props));
+
+	    _this.props = props;
+	    _this.state = {
+	      picStatus: false
+	    };
+
+	    return _this;
+	  }
+
+	  _createClass(Pic, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement('div', null, _react2.default.createElement('h1', null, 'Pic'));
+	    }
+	  }]);
+
+	  return Pic;
+	}(_react.Component);
+
+	exports.default = Pic;
 
 /***/ }
 /******/ ]);
