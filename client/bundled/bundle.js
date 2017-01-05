@@ -26885,7 +26885,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = function (state) {
-	  _axios2.default.get('http://www.reddit.com/r/puppies/hot.json').then(function (result) {
+	  _axios2.default.get('https://www.reddit.com/r/puppies/hot.json').then(function (result) {
 	    console.log('cache update success!');
 	    state.picCache = result.data.data.children;
 	  }).catch(function (error) {
