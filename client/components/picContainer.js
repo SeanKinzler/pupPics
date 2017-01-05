@@ -1,8 +1,8 @@
 import React, { Component } from 'react';  
 import { Link, Button } from 'react-router';
 import Pic from './pic.js';
-import setCache from '../utils/setCache.js';
-import getRandomPic from '../utils/getRandomPic.js';
+import setCache from '../../utils/setCache.js';
+import getRandomPic from '../../utils/getRandomPic.js';
 
 export default class PicContainer extends Component {  
   constructor(props) {

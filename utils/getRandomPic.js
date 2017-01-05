@@ -1,4 +1,3 @@
-
 export default (cache) => {
   let pic = `${Math.floor(cache.length * Math.random())}`;
   while (cache[pic].data.url.indexOf('/a/') !== -1 && cache[pic].data.url.indexOf('/gallery/') !== -1) {

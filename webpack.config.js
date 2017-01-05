@@ -1,14 +1,14 @@
 module.exports = {
-    entry: "./index.js",
+    entry: "./client/index.js",
     output: {
         path: __dirname,
-        filename: "bundle.js"
+        filename: "./client/bundled/bundle.js"
     },
     module: {
         loaders: [{
             test: /\.js?$/, 
             loader: 'babel', 
-            exclude: /node_modules/,
+            exclude: '/node_modules/ | /server/',
             query: {
                 presets: ['react', 'es2015']
             }
