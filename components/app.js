@@ -8,7 +8,7 @@ export default class App extends Component {
     return (
       <div className="main">
         <h1>
-          App
+          Alison's App!
         </h1> 
         <PicContainer />
       </div>

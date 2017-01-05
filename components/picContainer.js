@@ -19,15 +19,8 @@ export default class PicContainer extends Component {
   render() {
     return (
       <div className="main" >
-        <h1>
-          Container
-        </h1>
-        
-        <p>
-          {this.state.picUrl}
-        </p>
         <div onClick={() => {getPic(this.state, this)}}>
-          Button
+          Click here for a new puppy!
         </div>
         <img id="pupPic" src={this.state.picUrl} style= {{
           'maxWidth': window.innerWidth * .5 + 'px',
