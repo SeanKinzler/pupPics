@@ -1,2 +1,2 @@
 setup: webpack
-web: node server/server.js
+web: forever server/server.js

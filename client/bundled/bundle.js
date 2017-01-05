@@ -26885,7 +26885,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = function (state) {
-	  _axios2.default.get('https://www.reddit.com/r/puppies/hot.json').then(function (result) {
+	  _axios2.default.get('https://www.reddit.com/r/dogpictures/hot.json').then(function (result) {
 	    console.log('cache update success!');
 	    state.picCache = result.data.data.children;
 	  }).catch(function (error) {
@@ -28330,16 +28330,17 @@
 	});
 
 	exports.default = function (cache) {
-	  var pic = '' + Math.floor(cache.length * Math.random());
-	  while (cache[pic].data.url.indexOf('/a/') !== -1 && cache[pic].data.url.indexOf('/gallery/') !== -1) {
-	    console.log(pic);
-	    pic = '' + Math.floor(cache.length * Math.random());
-	  }
-
+	  var pic = Math.floor((cache.length - 1) * Math.random()) + 1;
 	  console.log(cache);
-	  console.log(cache[pic].data.url + '.jpg');
+	  var url = '' + cache[pic].data.url;
+	  if (url.slice(url.length - 3) !== 'jpg') {
+	    url = url + '.jpg';
+	  }
+	  console.log(url);
 	  console.log('number: ', pic);
-	  return cache[pic].data.url + '.jpg';
+	  var split = url.split('&amp;');
+
+	  return split.join('&');
 	};
 
 /***/ }
