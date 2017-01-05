@@ -26546,7 +26546,10 @@
 
 	      return _react2.default.createElement('div', { className: 'main' }, _react2.default.createElement('h1', null, 'Container'), _react2.default.createElement('p', null, this.state.picUrl), _react2.default.createElement('div', { onClick: function onClick() {
 	          getPic(_this2.state, _this2);
-	        } }, 'Button'), _react2.default.createElement('img', { src: this.state.picUrl }));
+	        } }, 'Button'), _react2.default.createElement('img', { id: 'pupPic', src: this.state.picUrl, style: {
+	          'maxWidth': window.innerWidth * .5 + 'px',
+	          'maxHeight': window.innerHeight * .5 + 'px'
+	        } }));
 	    }
 	  }]);
 
@@ -26557,8 +26560,6 @@
 	;
 
 	var getPic = function getPic(state, that) {
-	  console.log('this', that);
-	  console.log('pic state: ', state);
 	  state.picStatus = true;
 	  state.picUrl = (0, _getRandomPic2.default)(state.picCache);
 	  that.setState(state);
@@ -28228,9 +28229,10 @@
 	});
 
 	exports.default = function (cache) {
-	  console.log('ranom cache: ', cache);
 	  var pic = Math.floor(cache.length * Math.random());
+	  console.log(cache);
 	  console.log(cache[pic].data.url + '.jpg');
+	  console.log('number: ', pic);
 	  return cache[pic].data.url + '.jpg';
 	};
 

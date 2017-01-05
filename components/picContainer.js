@@ -18,7 +18,7 @@ export default class PicContainer extends Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="main" >
         <h1>
           Container
         </h1>
@@ -29,15 +29,16 @@ export default class PicContainer extends Component {
         <div onClick={() => {getPic(this.state, this)}}>
           Button
         </div>
-        <img src={this.state.picUrl}/>
+        <img id="pupPic" src={this.state.picUrl} style= {{
+          'maxWidth': window.innerWidth * .5 + 'px',
+          'maxHeight': window.innerHeight * .5 + 'px',
+        }}/>
       </div>
     );
   }
 };
 
 const getPic = (state, that) => {
-  console.log('this', that)
-  console.log('pic state: ', state)
   state.picStatus = true;
   state.picUrl = getRandomPic(state.picCache);
   that.setState(state);
