@@ -26700,6 +26700,15 @@
 	        'div',
 	        { className: 'main', style: _styles2.default.main },
 	        _react2.default.createElement(
+	          'nav',
+	          { className: 'navbar navbar-default', style: _styles2.default.navbar },
+	          _react2.default.createElement(
+	            'a',
+	            { className: 'navbar-brand', style: _styles2.default.brandLink, href: '#' },
+	            _react2.default.createElement('img', { alt: 'Brand', style: _styles2.default.brand, src: '/src/logo.png' })
+	          )
+	        ),
+	        _react2.default.createElement(
 	          'h1',
 	          { className: 'text-center text-white', style: _styles2.default.title },
 	          'Alison\'s App!'
@@ -47239,6 +47248,19 @@
 
 	  'title': {
 	    // 'borderWidthTop': '20px',
+	  },
+
+	  'navbar': {
+	    'minHeight': '60px',
+	    'backgroundColor': '#333333'
+	  },
+
+	  'brandLink': {
+	    'padding': '5px'
+	  },
+
+	  'brand': {
+	    'height': '50px'
 	  }
 	};
 
