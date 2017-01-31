@@ -6,7 +6,5 @@ import { render } from 'react-dom';
 import App from './components/app.js';
 
 render((
-  <div>
-    <App />
-  </div>
+  <App />
   ), document.getElementById('App'));

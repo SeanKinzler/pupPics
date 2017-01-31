@@ -1,18 +1,16 @@
 module.exports = {
   main: {
-    display: 'flex',
+    backgroundColor: '#B31C1C',
   },
 
   imageContainer: {
-    display: 'flex',
-    'marginTop': '20px',
-    'marginBottom': '20px',
+    'borderWidth': '20px',
   },
 
   'pupPicShow': {
     'maxWidth': window.innerWidth * .5 + 'px',
     'maxHeight': window.innerHeight * .5 + 'px',
-    'margin': 'auto',
+
   },
 
   'pupPicHide': {
@@ -20,11 +18,10 @@ module.exports = {
   },
 
   'randoButton': {
-    'margin': 'auto',
+    // 'borderWidthTop': '20px',
   },
 
   'title': {
-    'margin': 'auto',
-
+    // 'borderWidthTop': '20px',
   }
 }

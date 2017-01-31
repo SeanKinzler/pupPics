@@ -14,6 +14,7 @@ export default class PicContainer extends Component {
       picStatus: false,
       picUrl: null,
       picCache: null,
+      cacheStatus: false,
     }
     setCache(this.state);
   }
@@ -21,14 +22,12 @@ export default class PicContainer extends Component {
   render() {
     return (
       <div className="main">
+        <Button id="randButton" className="center-block" onClick={() => {getPic(this.state, this)}} bsSize="large">
+          Click here for a new puppy!
+        </Button>
         <div style={styles.imageContainer}>
-          <img id="pupPic" src={this.state.picUrl} 
+          <img id="pupPic" className="img-responsive center-block" src={this.state.picUrl} 
             style= {this.state.picStatus ? styles.pupPicShow : styles.pupPicHide}/>
-        </div>
-        <div style={styles.main}>
-          <Button id="randButton" style= {styles.randoButton} onClick={() => {getPic(this.state, this)}} bsSize="large">
-            Click here for a new puppy!
-          </Button>
         </div>
       </div>
     );

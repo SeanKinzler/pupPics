@@ -62,11 +62,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	(0, _reactDom.render)(_react2.default.createElement(
-	  'div',
-	  null,
-	  _react2.default.createElement(_app2.default, null)
-	), document.getElementById('App'));
+	(0, _reactDom.render)(_react2.default.createElement(_app2.default, null), document.getElementById('App'));
 
 /***/ },
 /* 1 */
@@ -26676,7 +26672,7 @@
 
 	var _picContainer2 = _interopRequireDefault(_picContainer);
 
-	var _styles = __webpack_require__(515);
+	var _styles = __webpack_require__(514);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -26702,15 +26698,11 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'main' },
+	        { className: 'main', style: _styles2.default.main },
 	        _react2.default.createElement(
-	          'div',
-	          { style: _styles2.default.main },
-	          _react2.default.createElement(
-	            'h1',
-	            { style: _styles2.default.title },
-	            'Alison\'s App!'
-	          )
+	          'h1',
+	          { className: 'text-center text-white', style: _styles2.default.title },
+	          'Alison\'s App!'
 	        ),
 	        _react2.default.createElement(_picContainer2.default, null)
 	      );
@@ -26755,7 +26747,7 @@
 
 	var _getRandomPic2 = _interopRequireDefault(_getRandomPic);
 
-	var _styles = __webpack_require__(515);
+	var _styles = __webpack_require__(514);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -26779,7 +26771,8 @@
 	    _this.state = {
 	      picStatus: false,
 	      picUrl: null,
-	      picCache: null
+	      picCache: null,
+	      cacheStatus: false
 	    };
 	    (0, _setCache2.default)(_this.state);
 	    return _this;
@@ -26794,21 +26787,17 @@
 	        'div',
 	        { className: 'main' },
 	        _react2.default.createElement(
-	          'div',
-	          { style: _styles2.default.imageContainer },
-	          _react2.default.createElement('img', { id: 'pupPic', src: this.state.picUrl,
-	            style: this.state.picStatus ? _styles2.default.pupPicShow : _styles2.default.pupPicHide })
+	          _reactBootstrap.Button,
+	          { id: 'randButton', className: 'center-block', onClick: function onClick() {
+	              getPic(_this2.state, _this2);
+	            }, bsSize: 'large' },
+	          'Click here for a new puppy!'
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: _styles2.default.main },
-	          _react2.default.createElement(
-	            _reactBootstrap.Button,
-	            { id: 'randButton', style: _styles2.default.randoButton, onClick: function onClick() {
-	                getPic(_this2.state, _this2);
-	              }, bsSize: 'large' },
-	            'Click here for a new puppy!'
-	          )
+	          { style: _styles2.default.imageContainer },
+	          _react2.default.createElement('img', { id: 'pupPic', className: 'img-responsive center-block', src: this.state.picUrl,
+	            style: this.state.picStatus ? _styles2.default.pupPicShow : _styles2.default.pupPicHide })
 	        )
 	      );
 	    }
@@ -45763,6 +45752,7 @@
 	  _axios2.default.get('https://www.reddit.com/r/dogpictures/hot.json').then(function (result) {
 	    console.log('cache update success!');
 	    state.picCache = result.data.data.children;
+	    state.cacheStatus = true;
 	  }).catch(function (error) {
 	    console.log(error);
 	  });
@@ -47219,27 +47209,24 @@
 	};
 
 /***/ },
-/* 514 */,
-/* 515 */
+/* 514 */
 /***/ function(module, exports) {
 
 	'use strict';
 
 	module.exports = {
 	  main: {
-	    display: 'flex'
+	    backgroundColor: '#B31C1C'
 	  },
 
 	  imageContainer: {
-	    display: 'flex',
-	    'marginTop': '20px',
-	    'marginBottom': '20px'
+	    'borderWidth': '20px'
 	  },
 
 	  'pupPicShow': {
 	    'maxWidth': window.innerWidth * .5 + 'px',
-	    'maxHeight': window.innerHeight * .5 + 'px',
-	    'margin': 'auto'
+	    'maxHeight': window.innerHeight * .5 + 'px'
+
 	  },
 
 	  'pupPicHide': {
@@ -47247,12 +47234,11 @@
 	  },
 
 	  'randoButton': {
-	    'margin': 'auto'
+	    // 'borderWidthTop': '20px',
 	  },
 
 	  'title': {
-	    'margin': 'auto'
-
+	    // 'borderWidthTop': '20px',
 	  }
 	};
 

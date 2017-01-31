@@ -1,5 +1,5 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+var combineLoaders = require('webpack-combine-loaders');
 // in the webpack config
 
 
@@ -7,7 +7,6 @@ module.exports = {
     entry: "./client/index.js",
     plugins: [
       new ExtractTextPlugin('styles.css'),
-      ...
     ],
     output: {
         path: __dirname,
