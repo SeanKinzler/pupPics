@@ -1,10 +1,15 @@
 import React, { Component } from 'react';  
-import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';
-import Router from 'react-router';  
+import { browserHistory, DefaultRoute, IndexRoute, Link, Route, RouteHandler, Router} from 'react-router';
 import { render } from 'react-dom';
-
 import App from './components/app.js';
-
+import Timer from './components/Timer.js';
+import PicContainer from './components/picContainer.js'
 render((
-  <App />
+  <Router history={browserHistory}>
+    <Route path='/' component={App}>
+      <IndexRoute component={PicContainer}/>
+      <Route path='timer' component={Timer} />
+      <Route path='main' component= {PicContainer} />
+    </Route>
+  </Router>
   ), document.getElementById('App'));

@@ -52,17 +52,33 @@
 
 	var _reactRouter = __webpack_require__(32);
 
-	var _reactRouter2 = _interopRequireDefault(_reactRouter);
-
 	var _reactDom = __webpack_require__(87);
 
 	var _app = __webpack_require__(233);
 
 	var _app2 = _interopRequireDefault(_app);
 
+	var _Timer = __webpack_require__(515);
+
+	var _Timer2 = _interopRequireDefault(_Timer);
+
+	var _picContainer = __webpack_require__(234);
+
+	var _picContainer2 = _interopRequireDefault(_picContainer);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	(0, _reactDom.render)(_react2.default.createElement(_app2.default, null), document.getElementById('App'));
+	(0, _reactDom.render)(_react2.default.createElement(
+	  _reactRouter.Router,
+	  { history: _reactRouter.browserHistory },
+	  _react2.default.createElement(
+	    _reactRouter.Route,
+	    { path: '/', component: _app2.default },
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _picContainer2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'timer', component: _Timer2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'main', component: _picContainer2.default })
+	  )
+	), document.getElementById('App'));
 
 /***/ },
 /* 1 */
@@ -26713,7 +26729,11 @@
 	          { className: 'text-center text-white', style: _styles2.default.title },
 	          'Alison\'s App!'
 	        ),
-	        _react2.default.createElement(_picContainer2.default, null)
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          this.props.children
+	        )
 	      );
 	    }
 	  }]);
@@ -47252,7 +47272,14 @@
 
 	  'navbar': {
 	    'minHeight': '60px',
-	    'backgroundColor': '#333333'
+	    'backgroundColor': '#dd3f30',
+	    'color': '#dd3f30',
+	    'borderColor': '#dd3f40',
+	    'backgroundImage': 'none'
+	  },
+
+	  'navbar-default': {
+	    'backgroundColor': '#dd3f30'
 	  },
 
 	  'brandLink': {
@@ -47263,6 +47290,63 @@
 	    'height': '50px'
 	  }
 	};
+
+/***/ },
+/* 515 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(32);
+
+	var _reactBootstrap = __webpack_require__(235);
+
+	var _styles = __webpack_require__(514);
+
+	var _styles2 = _interopRequireDefault(_styles);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Timer = function (_Component) {
+	  _inherits(Timer, _Component);
+
+	  function Timer() {
+	    _classCallCheck(this, Timer);
+
+	    return _possibleConstructorReturn(this, (Timer.__proto__ || Object.getPrototypeOf(Timer)).apply(this, arguments));
+	  }
+
+	  _createClass(Timer, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'hello world'
+	      );
+	    }
+	  }]);
+
+	  return Timer;
+	}(_react.Component);
+
+	exports.default = Timer;
 
 /***/ }
 /******/ ]);

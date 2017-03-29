@@ -16,7 +16,9 @@ export default class App extends Component {
         <h1 className="text-center text-white" style={styles.title}>
           Alison's App!
         </h1> 
-        <PicContainer />
+        <div>
+          {this.props.children}
+        </div>
       </div>
     );
   }
