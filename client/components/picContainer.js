@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import Pic from './pic.js';
 import setCache from '../../utils/setCache.js';
 import getRandomPic from '../../utils/getRandomPic.js';
-import styles from '../../styles/styles.js';
+import styles from '../styles/styles.js';
 
 export default class PicContainer extends Component {  
   constructor(props) {
@@ -21,7 +21,7 @@ export default class PicContainer extends Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="container1">
         <Button id="randButton" className="center-block" onClick={() => {getPic(this.state, this)}} bsSize="large">
           Click here for a new puppy!
         </Button>

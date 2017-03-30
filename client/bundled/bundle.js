@@ -26688,7 +26688,7 @@
 
 	var _picContainer2 = _interopRequireDefault(_picContainer);
 
-	var _styles = __webpack_require__(514);
+	var _styles = __webpack_require__(516);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -26714,7 +26714,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'main', style: _styles2.default.main },
+	        { className: 'appContainer', style: _styles2.default.appContainer },
 	        _react2.default.createElement(
 	          'nav',
 	          { className: 'navbar navbar-default', style: _styles2.default.navbar },
@@ -26776,7 +26776,7 @@
 
 	var _getRandomPic2 = _interopRequireDefault(_getRandomPic);
 
-	var _styles = __webpack_require__(514);
+	var _styles = __webpack_require__(516);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -26814,7 +26814,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'main' },
+	        { className: 'container1' },
 	        _react2.default.createElement(
 	          _reactBootstrap.Button,
 	          { id: 'randButton', className: 'center-block', onClick: function onClick() {
@@ -47238,14 +47238,92 @@
 	};
 
 /***/ },
-/* 514 */
+/* 514 */,
+/* 515 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(32);
+
+	var _reactBootstrap = __webpack_require__(235);
+
+	var _styles = __webpack_require__(516);
+
+	var _styles2 = _interopRequireDefault(_styles);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Timer = function (_Component) {
+	  _inherits(Timer, _Component);
+
+	  function Timer() {
+	    _classCallCheck(this, Timer);
+
+	    return _possibleConstructorReturn(this, (Timer.__proto__ || Object.getPrototypeOf(Timer)).apply(this, arguments));
+	  }
+
+	  _createClass(Timer, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container1 timerContainer' },
+	        _react2.default.createElement(
+	          'button',
+	          { className: 'btn btn-success' },
+	          'Start'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { className: 'btn btn-danger' },
+	          'Stop'
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Timer;
+	}(_react.Component);
+
+	exports.default = Timer;
+
+/***/ },
+/* 516 */
 /***/ function(module, exports) {
 
 	'use strict';
 
 	module.exports = {
-	  main: {
-	    backgroundColor: '#B31C1C'
+
+	  container1: {
+	    position: 'relative',
+	    'min-height': '400px',
+	    margin: 'auto'
+	  },
+
+	  appContainer: {
+	    backgroundColor: '#B31C1C',
+	    position: 'relative',
+	    minHeight: '400px',
+	    margin: 'auto',
+	    height: '100%'
 	  },
 
 	  imageContainer: {
@@ -47290,63 +47368,6 @@
 	    'height': '50px'
 	  }
 	};
-
-/***/ },
-/* 515 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(32);
-
-	var _reactBootstrap = __webpack_require__(235);
-
-	var _styles = __webpack_require__(514);
-
-	var _styles2 = _interopRequireDefault(_styles);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Timer = function (_Component) {
-	  _inherits(Timer, _Component);
-
-	  function Timer() {
-	    _classCallCheck(this, Timer);
-
-	    return _possibleConstructorReturn(this, (Timer.__proto__ || Object.getPrototypeOf(Timer)).apply(this, arguments));
-	  }
-
-	  _createClass(Timer, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'hello world'
-	      );
-	    }
-	  }]);
-
-	  return Timer;
-	}(_react.Component);
-
-	exports.default = Timer;
 
 /***/ }
 /******/ ]);

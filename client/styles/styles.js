@@ -1,6 +1,17 @@
 module.exports = {
-  main: {
+  
+  container1: {
+    position: 'relative',
+    'min-height': '400px',
+    margin: 'auto',
+  },
+
+  appContainer: {
     backgroundColor: '#B31C1C',
+    position: 'relative',
+    minHeight: '400px',
+    margin: 'auto',
+    height: '100%'
   },
 
   imageContainer: {
