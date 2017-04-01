@@ -16,9 +16,11 @@ module.exports = {
 
   imageContainer: {
     'borderWidth': '20px',
+    'margin': '20px',
   },
 
   'pupPicShow': {
+    
     'maxWidth': window.innerWidth * .5 + 'px',
     'maxHeight': window.innerHeight * .5 + 'px',
 
@@ -33,7 +35,7 @@ module.exports = {
   },
 
   'title': {
-    // 'borderWidthTop': '20px',
+    'margin': '20px',
   },
 
   'navbar': {
