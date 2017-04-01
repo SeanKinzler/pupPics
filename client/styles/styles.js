@@ -30,8 +30,27 @@ module.exports = {
     'visibility': 'hidden',
   },
 
-  'randoButton': {
-    // 'borderWidthTop': '20px',
+  'timerBtn': {
+    'width': '400px',
+    'height': '60px',
+  },
+
+  'resetBtn': {
+    'width': '400px',
+    'height': '60px',
+    'backgroundColor': '#bcbcbc',
+  },
+
+  'clockContainer': {
+    'backgroundColor': '#e8e8e8',
+    'height': '60px',
+    'width': '400px',
+    'borderWidth': '2px',
+    'borderRadius': '4px',
+    'borderWidth': '20px',
+    'borderColor': 'black',
+    'fontSize': '40px',
+
   },
 
   'title': {

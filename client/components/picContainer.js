@@ -1,7 +1,6 @@
 import React, { Component } from 'react';  
 import { Link } from 'react-router';
 import { Button } from 'react-bootstrap';
-import Pic from './pic.js';
 import setCache from '../../utils/setCache.js';
 import getRandomPic from '../../utils/getRandomPic.js';
 import styles from '../styles/styles.js';
@@ -22,7 +21,7 @@ export default class PicContainer extends Component {
   render() {
     return (
       <div className="container1">
-        <Button id="randButton" className="center-block" onClick={() => {getPic(this.state, this)}} bsSize="large">
+        <Button id="randButton" className="btn center-block" onClick={() => {getPic(this.state, this)}} bsSize="large">
           Click here for a new puppy!
         </Button>
         <div style={styles.imageContainer}>
@@ -38,4 +37,4 @@ const getPic = (state, that) => {
   state.picStatus = true;
   state.picUrl = getRandomPic(state.picCache);
   that.setState(state);
-}
+};
