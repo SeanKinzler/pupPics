@@ -33,12 +33,14 @@ module.exports = {
   'timerBtn': {
     'width': '400px',
     'height': '60px',
+    'fontSize': '30px',
   },
 
   'resetBtn': {
     'width': '400px',
     'height': '60px',
     'backgroundColor': '#bcbcbc',
+    'fontSize': '30px',
   },
 
   'clockContainer': {

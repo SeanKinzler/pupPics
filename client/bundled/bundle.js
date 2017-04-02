@@ -47207,13 +47207,15 @@
 
 	  'timerBtn': {
 	    'width': '400px',
-	    'height': '60px'
+	    'height': '60px',
+	    'fontSize': '30px'
 	  },
 
 	  'resetBtn': {
 	    'width': '400px',
 	    'height': '60px',
-	    'backgroundColor': '#bcbcbc'
+	    'backgroundColor': '#bcbcbc',
+	    'fontSize': '30px'
 	  },
 
 	  'clockContainer': (_clockContainer = {
@@ -47297,16 +47299,21 @@
 	        'nav',
 	        { className: 'navbar navbar-toggleable-md', style: _styles2.default.navbar },
 	        _react2.default.createElement(
+	          'button',
+	          { className: 'navbar-toggler navbar-toggler-right', type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarSupportedContent', 'aria-controls': 'navbarSupportedContent', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
+	          _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
+	        ),
+	        _react2.default.createElement(
 	          'a',
 	          { className: 'navbar-brand', style: _styles2.default.brandLink, href: '/' },
 	          _react2.default.createElement('img', { alt: 'Brand', style: _styles2.default.brand, src: '/src/logo.png' })
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'collapse navbar-default', id: 'navbarNav' },
+	          { className: 'collapse navbar-collapse', id: 'navbarSupportedContent' },
 	          _react2.default.createElement(
 	            'ul',
-	            { className: 'navbar-nav' },
+	            { className: 'navbar-nav mr-auto' },
 	            _react2.default.createElement(
 	              'li',
 	              { className: 'nav-item' },
