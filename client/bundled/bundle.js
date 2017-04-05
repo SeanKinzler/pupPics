@@ -47233,14 +47233,32 @@
 	  'navbar': {
 	    'minHeight': '60px',
 	    'backgroundColor': '#dd3f30',
-	    'color': '#dd3f30',
+	    // 'color': '#dd3f30',
 	    'borderColor': '#dd3f40',
 	    'backgroundImage': 'none'
 	  },
 
-	  'navbar-default': {
-	    'backgroundColor': '#dd3f30'
-	  },
+	  // 'navbar-nav': {
+	  //   width: '1000px',
+	  //   height: '40px',
+	  //   float: 'left',
+	  //   backgroundColor: 'black',
+	  // },
+
+	  // 'nav-item': {
+	  //   width: '200px',
+	  //   height: '40px',
+	  //   display: 'inline-block',
+	  //   textAlign: 'center',
+	  //   float: 'left',
+	  // },
+
+	  // 'nav-link': {
+	  //   width: '200px',
+	  //   height: '40px',
+	  //   display: 'inline-block',
+	  //   color: 'white',
+	  // },
 
 	  'brandLink': {
 	    'padding': '5px'
@@ -47297,39 +47315,54 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'nav',
-	        { className: 'navbar navbar-toggleable-md', style: _styles2.default.navbar },
-	        _react2.default.createElement(
-	          'button',
-	          { className: 'navbar-toggler navbar-toggler-right', type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarSupportedContent', 'aria-controls': 'navbarSupportedContent', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
-	          _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
-	        ),
-	        _react2.default.createElement(
-	          'a',
-	          { className: 'navbar-brand', style: _styles2.default.brandLink, href: '/' },
-	          _react2.default.createElement('img', { alt: 'Brand', style: _styles2.default.brand, src: '/src/logo.png' })
-	        ),
+	        { className: 'navbar navbar-default', style: _styles2.default.navbar },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'collapse navbar-collapse', id: 'navbarSupportedContent' },
+	          { className: 'container-fluid' },
 	          _react2.default.createElement(
-	            'ul',
-	            { className: 'navbar-nav mr-auto' },
+	            'div',
+	            { className: 'navbar-header' },
 	            _react2.default.createElement(
-	              'li',
-	              { className: 'nav-item' },
+	              'button',
+	              { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '#navMain', 'aria-expanded': 'false' },
 	              _react2.default.createElement(
-	                'a',
-	                { className: 'nav-link', href: '/' },
-	                'Home'
-	              )
+	                'span',
+	                { className: 'sr-only' },
+	                'Toggle navigation'
+	              ),
+	              _react2.default.createElement('span', { className: 'icon-bar' }),
+	              _react2.default.createElement('span', { className: 'icon-bar' }),
+	              _react2.default.createElement('span', { className: 'icon-bar' })
 	            ),
 	            _react2.default.createElement(
-	              'li',
-	              { className: 'nav-item' },
+	              'a',
+	              { className: 'navbar-brand', style: _styles2.default.brandLink, href: '/' },
+	              _react2.default.createElement('img', { alt: 'Brand', style: _styles2.default.brand, src: '/src/logo.png' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'navMain', className: 'collapse navbar-collapse' },
+	            _react2.default.createElement(
+	              'ul',
+	              { className: 'navbar-nav nav' },
 	              _react2.default.createElement(
-	                'a',
-	                { className: 'nav-link', href: '/timer' },
-	                'Timer'
+	                'li',
+	                { className: 'active' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: '/' },
+	                  'Home'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: '/timer' },
+	                  'Timer'
+	                )
 	              )
 	            )
 	          )

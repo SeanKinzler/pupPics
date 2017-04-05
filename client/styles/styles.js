@@ -62,14 +62,32 @@ module.exports = {
   'navbar': {
     'minHeight': '60px',
     'backgroundColor': '#dd3f30',
-    'color': '#dd3f30',
+    // 'color': '#dd3f30',
     'borderColor': '#dd3f40',
     'backgroundImage': 'none'
   },
 
-  'navbar-default': {
-    'backgroundColor': '#dd3f30'
-  },
+  // 'navbar-nav': {
+  //   width: '1000px',
+  //   height: '40px',
+  //   float: 'left',
+  //   backgroundColor: 'black',
+  // },
+
+  // 'nav-item': {
+  //   width: '200px',
+  //   height: '40px',
+  //   display: 'inline-block',
+  //   textAlign: 'center',
+  //   float: 'left',
+  // },
+
+  // 'nav-link': {
+  //   width: '200px',
+  //   height: '40px',
+  //   display: 'inline-block',
+  //   color: 'white',
+  // },
 
   'brandLink': {
     'padding': '5px',
