@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { Button } from 'react-bootstrap';
 import setCache from '../../utils/setCache.js';
 import getRandomPic from '../../utils/getRandomPic.js';
+import handlers from '../../utils/handlers.js';
 import styles from '../styles/styles.js';
 
 export default class PicContainer extends Component {  
@@ -16,6 +17,10 @@ export default class PicContainer extends Component {
       cacheStatus: false,
     }
     setCache(this.state);
+  }
+
+  componentDidMount() {
+    handlers.puppies();
   }
 
   render() {

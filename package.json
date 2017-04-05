@@ -27,6 +27,7 @@
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "forever": "^0.15.3",
+    "jquery": "^3.2.1",
     "node-stopwatch": "0.0.1",
     "random-puppy": "^1.1.0",
     "react": "^15.4.1",

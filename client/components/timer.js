@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { Button } from 'react-bootstrap';
 import styles from '../styles/styles.js'; 
+import handlers from '../../utils/handlers.js';
 
 export default class Timer extends Component {
   constructor(props) {
@@ -14,6 +15,10 @@ export default class Timer extends Component {
       running: false,
       timeString: '00:00:00',
     }
+  }
+
+  componentDidMount() {
+    handlers.timer();
   }
 
   updateTime(state, that) {
@@ -71,12 +76,6 @@ export default class Timer extends Component {
     state.timerMin = 0;
     state.timeString = '00:00:00';
     that.setState(state);
-  }
-
-  componentDidMount() {
-  }
-
-  componentWillUnmount() {
   }
 
   render() {

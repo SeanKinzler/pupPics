@@ -1,7 +1,8 @@
 import React, { Component } from 'react';  
-import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';
-import Router from 'react-router';  
+import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';  
+import { browserHistory, Router } from 'react-router';
 import styles from '../styles/styles.js';
+import handlers from '../../utils/handlers.js';
 
 export default class NavBar extends Component {  
   render() {
@@ -21,8 +22,8 @@ export default class NavBar extends Component {
         </div>
         <div id="navMain" className="collapse navbar-collapse">
           <ul className="navbar-nav nav" style={styles.navUl}>
-            <li className="active"><a href="/">Home</a></li>
-            <li><a href="/timer">Timer</a></li>
+            <li id="puppiesNav"><a onClick={() => {browserHistory.push('/')}} >Puppies</a></li>
+            <li id="timerNav"><a onClick={() => {browserHistory.push('/timer')}} >Timer</a></li>
           </ul>
         </div>
       </div>

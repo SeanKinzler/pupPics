@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Button } from 'react-router';
+import handlers from '../../utils/handlers.js';
 
 export default class Pic extends Component {
   constructor(props) {
@@ -8,6 +9,7 @@ export default class Pic extends Component {
     this.state = {
       picStatus: false,
     }
+    
 
   }
 
