@@ -20,7 +20,7 @@ export default class NavBar extends Component {
           </a>
         </div>
         <div id="navMain" className="collapse navbar-collapse">
-          <ul className="navbar-nav nav">
+          <ul className="navbar-nav nav" style={styles.navUl}>
             <li className="active"><a href="/">Home</a></li>
             <li><a href="/timer">Timer</a></li>
           </ul>

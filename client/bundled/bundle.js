@@ -47231,27 +47231,17 @@
 	  },
 
 	  'navbar': {
-	    'minHeight': '60px',
 	    'backgroundColor': '#dd3f30',
-	    // 'color': '#dd3f30',
-	    'borderColor': '#dd3f40',
+	    'color': '#555',
+	    borderWidth: 0,
+	    'borderColor': '#dd3f30',
 	    'backgroundImage': 'none'
 	  },
 
-	  // 'navbar-nav': {
-	  //   width: '1000px',
-	  //   height: '40px',
-	  //   float: 'left',
-	  //   backgroundColor: 'black',
-	  // },
+	  'navUl': {
+	    color: '#333'
 
-	  // 'nav-item': {
-	  //   width: '200px',
-	  //   height: '40px',
-	  //   display: 'inline-block',
-	  //   textAlign: 'center',
-	  //   float: 'left',
-	  // },
+	  },
 
 	  // 'nav-link': {
 	  //   width: '200px',
@@ -47265,7 +47255,7 @@
 	  },
 
 	  'brand': {
-	    'height': '50px'
+	    'height': '40px'
 	  }
 	};
 
@@ -47345,7 +47335,7 @@
 	            { id: 'navMain', className: 'collapse navbar-collapse' },
 	            _react2.default.createElement(
 	              'ul',
-	              { className: 'navbar-nav nav' },
+	              { className: 'navbar-nav nav', style: _styles2.default.navUl },
 	              _react2.default.createElement(
 	                'li',
 	                { className: 'active' },

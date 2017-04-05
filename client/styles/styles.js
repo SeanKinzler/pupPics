@@ -60,27 +60,17 @@ module.exports = {
   },
 
   'navbar': {
-    'minHeight': '60px',
     'backgroundColor': '#dd3f30',
-    // 'color': '#dd3f30',
-    'borderColor': '#dd3f40',
+    'color': '#555',
+    borderWidth: 0,
+    'borderColor': '#dd3f30',
     'backgroundImage': 'none'
   },
 
-  // 'navbar-nav': {
-  //   width: '1000px',
-  //   height: '40px',
-  //   float: 'left',
-  //   backgroundColor: 'black',
-  // },
+  'navUl': {
+    color: '#333',
 
-  // 'nav-item': {
-  //   width: '200px',
-  //   height: '40px',
-  //   display: 'inline-block',
-  //   textAlign: 'center',
-  //   float: 'left',
-  // },
+  },
 
   // 'nav-link': {
   //   width: '200px',
@@ -94,6 +84,6 @@ module.exports = {
   },
 
   'brand': {
-    'height': '50px',
+    'height': '40px',
   }
 }
