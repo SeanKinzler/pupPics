@@ -47191,7 +47191,7 @@
 	  },
 
 	  appContainer: {
-	    backgroundColor: '#FED0D4',
+	    // backgroundColor: '#FED0D4',
 	    position: 'relative',
 	    minHeight: '400px',
 	    margin: 'auto',
@@ -47223,7 +47223,7 @@
 	  'resetBtn': {
 	    'width': '400px',
 	    'height': '60px',
-	    'backgroundColor': '#bcbcbc',
+	    'backgroundColor': '#F9F9F9',
 	    'fontSize': '30px'
 	  },
 
@@ -47319,13 +47319,13 @@
 	        { className: 'navbar navbar-default', style: _styles2.default.navbar },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'container-fluid' },
+	          { className: 'container-fluid', id: 'navfluid' },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'navbar-header' },
 	            _react2.default.createElement(
 	              'button',
-	              { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '#navMain', 'aria-expanded': 'false' },
+	              { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '#navigationbar' },
 	              _react2.default.createElement(
 	                'span',
 	                { className: 'sr-only' },
@@ -47343,10 +47343,10 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { id: 'navMain', className: 'collapse navbar-collapse' },
+	            { className: 'collapse navbar-collapse', id: 'navigationbar' },
 	            _react2.default.createElement(
 	              'ul',
-	              { className: 'navbar-nav nav', style: _styles2.default.navUl },
+	              { className: 'nav navbar-nav', style: _styles2.default.navUl },
 	              _react2.default.createElement(
 	                'li',
 	                { id: 'puppiesNav' },

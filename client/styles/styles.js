@@ -7,7 +7,7 @@ module.exports = {
   },
 
   appContainer: {
-    backgroundColor: '#FED0D4',
+    // backgroundColor: '#FED0D4',
     position: 'relative',
     minHeight: '400px',
     margin: 'auto',
@@ -39,7 +39,7 @@ module.exports = {
   'resetBtn': {
     'width': '400px',
     'height': '60px',
-    'backgroundColor': '#bcbcbc',
+    'backgroundColor': '#F9F9F9',
     'fontSize': '30px',
   },
 
