@@ -22,16 +22,16 @@ html, body {
 .navbar-default .navbar-nav>.active>a, 
 .navbar-default .navbar-nav>.active>a:focus, 
 .navbar-default .navbar-nav>.active>a:hover {
-  background-color:#C05290;
-  border-color:#C05290;
+  background-color:#9EC2E4;
+  border-color:#9EC2E4;
   background-image: none;
   color: #333;
 }
 
 .navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover {
-  background-color:#d85f54;
-  border-color:#d85f54;
+  background-color:#FFCFAB;
+  border-color:#FFCFAB;
   background-image:none;
   color: #333;
 }

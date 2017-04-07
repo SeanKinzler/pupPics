@@ -47191,7 +47191,7 @@
 	  },
 
 	  appContainer: {
-	    backgroundColor: '#B31C1C',
+	    backgroundColor: '#FED0D4',
 	    position: 'relative',
 	    minHeight: '400px',
 	    margin: 'auto',
@@ -47240,7 +47240,7 @@
 	  },
 
 	  'navbar': {
-	    'backgroundColor': '#dd3f30',
+	    'backgroundColor': '#FB868F',
 	    'color': '#555',
 	    borderWidth: 0,
 	    'borderColor': '#dd3f30',
@@ -47576,7 +47576,6 @@
 	  timer: function timer() {
 	    (0, _jquery2.default)('.active').removeClass('active');
 	    (0, _jquery2.default)('#timerNav').addClass('active');
-	    console.log('timer handler');
 	  }
 	};
 

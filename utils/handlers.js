@@ -9,6 +9,5 @@ module.exports = {
   timer: () => {
     $('.active').removeClass('active');
     $('#timerNav').addClass('active');
-    console.log('timer handler')
   },
 };

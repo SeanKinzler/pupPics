@@ -7,7 +7,7 @@ module.exports = {
   },
 
   appContainer: {
-    backgroundColor: '#B31C1C',
+    backgroundColor: '#FED0D4',
     position: 'relative',
     minHeight: '400px',
     margin: 'auto',
@@ -60,7 +60,7 @@ module.exports = {
   },
 
   'navbar': {
-    'backgroundColor': '#dd3f30',
+    'backgroundColor': '#FB868F',
     'color': '#555',
     borderWidth: 0,
     'borderColor': '#dd3f30',
